@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 # ---------- Webhook URL ----------
-WEBHOOK_URL = "https://rahul23012006.app.n8n.cloud/webhook/5467c41d-d072-41bd-b2f8-22190b2f1bad"  # replace with your n8n webhook URL
+WEBHOOK_URL = st.secrets["WEBHOOK_URL"]  # replace with your n8n webhook URL
 
 # ---------- Session state for message history ----------
 if "messages" not in st.session_state:
