@@ -79,6 +79,17 @@ streamlit run app.py
 
 The app will open at `http://localhost:8501`.
 
+## 📸 Screenshots
+
+### Home Page
+![Home](screenshots/home.png)
+
+### Chat with Assistant
+![Chat](screenshots/chat.png)
+
+### n8n Automation page
+![automation](screenshots/automation.png)
+
 ## ☁️ Deployment (Streamlit Community Cloud)
 
 1. Push this repo to GitHub.
