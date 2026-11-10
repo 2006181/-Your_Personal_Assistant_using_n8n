@@ -9,6 +9,23 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+# ---------- Password gate ----------
+def check_password():
+    if st.session_state.get("authenticated"):
+        return True
+    st.title("🔐 Login")
+    pwd = st.text_input("Enter password", type="password")
+    if pwd:
+        if pwd == st.secrets["APP_PASSWORD"]:
+            st.session_state.authenticated = True
+            st.rerun()
+        else:
+            st.error("Wrong password")
+    return False
+
+if not check_password():
+    st.stop()
+
 # ---------- Webhook URL ----------
 WEBHOOK_URL = st.secrets["WEBHOOK_URL"]  # replace with your n8n webhook URL
 
